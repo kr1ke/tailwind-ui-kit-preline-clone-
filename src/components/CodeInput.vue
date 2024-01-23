@@ -72,4 +72,8 @@ for (; i < 9; i++) {
     }
   }
 }
+
+function f1() {
+
+}
 </script>
