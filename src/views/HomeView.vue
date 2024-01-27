@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import RenderToIFrame from '../components/RenderToIFrame'
+import RenderToIFrame from '@/components/RenderToIFrame'
+import BaseMonacoEditor from '@/components/BaseMonacoEditor.vue'
 import { ref, onMounted } from 'vue'
 
 const myFrame = ref(null)
@@ -50,7 +51,8 @@ const codeValue = ref(
             </li>
           </ul>
           <p>Perfect for learning how the framework works, prototyping a new idea, or creating a demo to share online.</p>
-        </div>`)
+        </div>`
+)
 const testBool = ref(false)
 onMounted(() => {
   setTimeout(() => {
@@ -63,7 +65,8 @@ onMounted(() => {
   <div class="px-8 py-4">
     <h1 @click="testBool = !testBool">Handler</h1>
     <div class="flex">
-      <code>{{codeValue}}</code>
+      <BaseMonacoEditor width="700px" height="500px" v-model="codeValue" />
+      <!--      <code>{{codeValue}}</code>-->
       <RenderToIFrame width="700px" height="500px" class="border border-blue-700">
         <div v-html="codeValue" v-if="testBool"></div>
         <!--      <span class="text-xl font-bold">ffff</span>-->
