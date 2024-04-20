@@ -66,13 +66,6 @@ onMounted(() => {
     <h1 @click="testBool = !testBool">Handler</h1>
     <div class="flex">
       <BaseMonacoEditor width="700px" height="500px" v-model="codeValue" />
-      <!--      <code>{{codeValue}}</code>-->
-      <RenderToIFrame width="700px" height="500px" class="border border-blue-700">
-        <div v-html="codeValue" v-if="testBool"></div>
-        <!--      <span class="text-xl font-bold">ffff</span>-->
-        <!--      I'm literally counting in an iframe {{ count }}-->
-        <!--      <button @click="count++">Increment Inside iframe</button>-->
-      </RenderToIFrame>
     </div>
   </div>
 </template>

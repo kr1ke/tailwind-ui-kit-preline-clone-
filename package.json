@@ -17,6 +17,7 @@
     "@codemirror/theme-one-dark": "^6.1.2",
     "@guolao/vue-monaco-editor": "^1.4.1",
     "@preline/select": "^2.0.2",
+    "@vue/repl": "^4.1.1",
     "codemirror": "^5.65.16",
     "codemirror-editor-vue3": "^2.4.1",
     "pinia": "^2.1.7",
