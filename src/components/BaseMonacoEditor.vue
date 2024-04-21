@@ -9,7 +9,15 @@ const code = ref(`
         <h1>set data success</h1>
       </template>`)
 
-const store = new useStore()
+const store = new useStore({
+  builtinImportMap: ref({
+    imports: {
+      vue: 'https://play.vuejs.org/vue.runtime.esm-browser.js',
+      'vue/server-renderer': 'https://play.vuejs.org/server-renderer.esm-browser.js',
+      '@headlessui/vue': 'https://unpkg.com/@headlessui/vue@1.7.3/dist/headlessui.esm.js'
+    }
+  })
+})
 function setData() {
   store.setFiles({
     'src/App.vue': code.value
@@ -18,11 +26,15 @@ function setData() {
 function getFiles() {
   console.log(store.getFiles())
 }
+function onSetImportMap() {
+  // console.log(store)
+}
 </script>
 
 <template>
   <div>
     <div class="flex *:border gap-2">
+      <button @click="onSetImportMap">click</button>
       <button @click="setData">set data</button>
       <button @click="getFiles">get data</button>
     </div>
