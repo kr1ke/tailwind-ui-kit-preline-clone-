@@ -1,0 +1,3 @@
+{
+  "code": "<script setup>\nimport Example from './Example.vue';\nconst tailwindScript = document.createElement('script')\ntailwindScript.setAttribute('src', 'https://cdn.tailwindcss.com')\ndocument.head.appendChild(tailwindScript)\n</script>\n\n<template>\n  <Example />\n</template>\n"
+}
